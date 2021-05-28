@@ -58,16 +58,15 @@ public class NewsDetailProcessor implements Processor {
             for(int j = 0; j < 2 ; j++){
                 ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(collectPositionStr));
             }
-//            不发送评论
-//            //点击 评论输入框
-//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(discussWritePositionStr));
-//            //输入文字 好文章
-//            int[] keyCode = {KeyEvent.VK_H, KeyEvent.VK_A, KeyEvent.VK_O,
-//                KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_N,
-//                KeyEvent.VK_Z, KeyEvent.VK_H, KeyEvent.VK_A, KeyEvent.VK_N, KeyEvent.VK_G, KeyEvent.VK_SPACE};
-//            ClickPositionUtil.writeA2Z(robot, keyCode);
-//            //点击 评论发送
-//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(discussSendPositionStr));
+            //点击 评论输入框
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(discussWritePositionStr));
+            //输入文字 好文章
+            int[] keyCode = {KeyEvent.VK_H, KeyEvent.VK_A, KeyEvent.VK_O,
+                KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_N,
+                KeyEvent.VK_Z, KeyEvent.VK_H, KeyEvent.VK_A, KeyEvent.VK_N, KeyEvent.VK_G, KeyEvent.VK_SPACE};
+            ClickPositionUtil.writeA2Z(robot, keyCode);
+            //点击 评论发送
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(discussSendPositionStr));
             //点击 后退
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
         }

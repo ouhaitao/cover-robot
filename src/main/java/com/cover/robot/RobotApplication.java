@@ -1,7 +1,6 @@
 package com.cover.robot;
 
 import com.cover.robot.controller.ProcessController;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,7 +12,7 @@ public class RobotApplication {
         SpringApplicationBuilder builder = new SpringApplicationBuilder(RobotApplication.class);
         ConfigurableApplicationContext context = builder.headless(false).run(args);
         ProcessController bean = context.getBean(ProcessController.class);
-        bean.processStart("brokeNewsOther");
+        bean.processStart("all");
     }
 
 }

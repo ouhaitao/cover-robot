@@ -37,7 +37,7 @@ public class VideoProcessor implements Processor {
             //点击 30s频道
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(channel30sPositionStr));
             //点击 第一个视频
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(firstVideoPositionStr));
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(firstVideoPositionStr), 6000);
             //点击 后退
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
             //点击 首页

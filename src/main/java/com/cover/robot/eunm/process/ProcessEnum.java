@@ -23,7 +23,8 @@ public enum ProcessEnum {
 //    //todo hkc 确认这里应该在哪里?是否能跟青椒合并
 //    VIDEO_BROKENEWS("videoBrokeNews", "videoBrokeNewsProcessor"),
     //青椒（加入圈子、关注）5*4=20
-    BROKENEWS_OTHER("brokeNewsOther", "brokeNewsOtherProcessor");
+    BROKENEWS_OTHER("brokeNewsOther", "brokeNewsOtherProcessor")
+    ;
 
     private String type;
     private String clazzName;

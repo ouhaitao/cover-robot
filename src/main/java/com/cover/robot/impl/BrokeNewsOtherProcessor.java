@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 
 @Service
@@ -39,24 +40,36 @@ public class BrokeNewsOtherProcessor implements Processor {
         robot.setAutoWaitForIdle(true);
         //开始流程
         for(int i = 0 ; i < countTime ;i ++){
-            //点击青椒频道
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(qjChannelPositionStr));
-            // 点击话题
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(subjectPositionStr));
-            //两次点击关注按钮（关注、取消关注）
-            for(int j = 0; j < 2 ; j++){
-                ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(focusPositionStr));
-            }
-            //点击返回
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
-            //点击圈子
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(circlePositionStr));
-            //两次点击加入（加入、退出）
-            for(int j = 0; j < 2 ; j++){
-                ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(jionPositionStr));
-            }
-            //点击返回
-            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
+//            //点击青椒频道
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(qjChannelPositionStr));
+//            // 点击话题
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(subjectPositionStr));
+//            //两次点击关注按钮（关注、取消关注）
+//            for(int j = 0; j < 2 ; j++){
+//                ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(focusPositionStr));
+//            }
+//            //点击返回
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
+//            //点击圈子
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(circlePositionStr));
+//            //两次点击加入（加入、退出）
+//            for(int j = 0; j < 2 ; j++){
+//                ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(jionPositionStr));
+//            }
+//            //点击返回
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
+//            // 点击中国频道使tab位于正确为止
+//            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":20,\"y\":180}"));
+            
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":500,\"y\":900}"));
+    
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":200,\"y\":200}"));
+    
+            int[] keyCode = {KeyEvent.VK_D, KeyEvent.VK_O, KeyEvent.VK_N,
+                KeyEvent.VK_G, KeyEvent.VK_T, KeyEvent.VK_A, KeyEvent.VK_I, KeyEvent.VK_SPACE};
+            ClickPositionUtil.writeA2Z(robot, keyCode);
+    
+            ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":500,\"y\":100}"));
         }
 
 
