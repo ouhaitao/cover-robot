@@ -58,15 +58,15 @@ public class BrokeNewsOtherProcessor implements Processor {
             }
             //点击返回
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance(backPositionStr));
-            
+//            发动态
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":500,\"y\":900}"));
-    
+//            选中输入框
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":200,\"y\":200}"));
-    
+//            文字
             int[] keyCode = {KeyEvent.VK_D, KeyEvent.VK_O, KeyEvent.VK_N,
                 KeyEvent.VK_G, KeyEvent.VK_T, KeyEvent.VK_A, KeyEvent.VK_I, KeyEvent.VK_SPACE};
             ClickPositionUtil.writeA2Z(robot, keyCode);
-    
+//            发送
             ClickPositionUtil.clickPosition(robot, BasePosition.getInstance("{\"x\":500,\"y\":100}"));
     
             // 点击中国频道使tab位于正确为止
